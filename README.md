@@ -1,0 +1,1 @@
+# SSD-2850-A02-ResponsiveImages-Starter

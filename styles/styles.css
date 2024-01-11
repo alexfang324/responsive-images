@@ -1,0 +1,311 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CSS Reset */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1;
+  margin: 0;
+  /* Remove the below line of code... */
+  background-color: red;
+}
+
+p,
+li,
+a,
+b {
+  font-family: 'Merriweather', serif;
+}
+
+p {
+  line-height: 1.4;
+  margin: 0.9em 0;
+}
+
+/* Responsive Image Reset */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* End Responsive Image Reset */
+
+/* End CSS Reset */
+
+/* Utility classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* End Utility classes */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-style: italic;
+  margin: 16px 0;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.25em;
+}
+
+header h1 {
+  margin: 0;
+  margin-right: auto;
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+header h1 a {
+  font-family: 'Pacifico', cursive;
+  color: #9e0002;
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 960px;
+  padding: 0 30px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+header {
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 60px;
+}
+
+.logo img {
+  display: block;
+}
+
+.hamburger-menu {
+  width: 60px;
+  height: 40px;
+  background-color: whitesmoke;
+}
+
+#btn-menu {
+  width: 50px;
+  height: 45px;
+  position: relative;
+  right: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#btn-menu .bar {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: purple;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+#btn-menu span:nth-child(1) {
+  top: 0px;
+}
+
+#btn-menu span:nth-child(2) {
+  top: 18px;
+}
+
+#btn-menu span:nth-child(3) {
+  top: 36px;
+}
+
+#btn-menu.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#btn-menu.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#btn-menu.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+nav {
+  display: none;
+}
+
+nav.open {
+  display: block;
+  width: 80vw;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+nav li {
+  display: flex;
+  height: 40px;
+  border: solid 1px black;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: auto 30px;
+}
+
+.banner img,
+.gallery img {
+  display: block;
+}
+
+.gallery-section {
+  padding-bottom: 30px;
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 30px;
+}
+
+.gallery-section h2 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.gallery {
+  border: 5px solid orange;
+  padding: 20px;
+  max-width: 716px;
+  margin: 0 auto;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+.gallery-item:first-child {
+  margin-bottom: 20px;
+}
+
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-top: 1px dotted #ccc;
+}
+
+@media (min-width: 560px) {
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .gallery-item {
+    width: 48%;
+  }
+
+  .gallery-item:first-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  .featured-image {
+    width: 39%;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 760px) {
+  nav {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  nav li {
+    border: none;
+  }
+  nav a {
+    margin: auto;
+  }
+
+  #btn-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 960px) {
+  body {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url('/images/bg-hightech.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+}
